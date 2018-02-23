@@ -25,6 +25,8 @@
 		4FFD22CA204006D0003760D0 /* IIAddNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD22C9204006D0003760D0 /* IIAddNavViewController.swift */; };
 		4FFD22CC204007BE003760D0 /* IIAddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD22CB204007BE003760D0 /* IIAddTextViewController.swift */; };
 		4FFD22CE2040090C003760D0 /* IIAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFD22CD2040090C003760D0 /* IIAddViewController.xib */; };
+		4FFD22D920401673003760D0 /* IIUserNologinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD22D820401673003760D0 /* IIUserNologinHeaderView.swift */; };
+		4FFD22DB20401683003760D0 /* IIUserNologinHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFD22DA20401683003760D0 /* IIUserNologinHeaderView.xib */; };
 		5466975D5B9E400422A0D264 /* Pods_IssueInvoiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ECC433D7AE904F889BF0A3 /* Pods_IssueInvoiceTests.framework */; };
 		AB4F7D896D7A57057AEE9541 /* Pods_IssueInvoiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CD5C85DBA4038956A980F4 /* Pods_IssueInvoiceUITests.framework */; };
 		D9FF690C54F8E74D7FD63C47 /* Pods_IssueInvoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372FB9E8351FE7F6959FB304 /* Pods_IssueInvoice.framework */; };
@@ -75,6 +77,8 @@
 		4FFD22C9204006D0003760D0 /* IIAddNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIAddNavViewController.swift; sourceTree = "<group>"; };
 		4FFD22CB204007BE003760D0 /* IIAddTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIAddTextViewController.swift; sourceTree = "<group>"; };
 		4FFD22CD2040090C003760D0 /* IIAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IIAddViewController.xib; sourceTree = "<group>"; };
+		4FFD22D820401673003760D0 /* IIUserNologinHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIUserNologinHeaderView.swift; sourceTree = "<group>"; };
+		4FFD22DA20401683003760D0 /* IIUserNologinHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IIUserNologinHeaderView.xib; sourceTree = "<group>"; };
 		52CD5C85DBA4038956A980F4 /* Pods_IssueInvoiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssueInvoiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54623085EE7766B3901ED702 /* Pods-IssueInvoiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueInvoiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssueInvoiceTests/Pods-IssueInvoiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AE2B25F9E60F6E8C95EC1CB /* Pods-IssueInvoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueInvoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssueInvoice/Pods-IssueInvoice.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 		4F4450B1203FB08D00940462 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				4FFD22D720401426003760D0 /* UI */,
 				4F4450B9203FB10200940462 /* IIMineViewController.swift */,
 			);
 			path = Mine;
@@ -258,6 +263,15 @@
 				4F4450C3203FB7F900940462 /* IIFixedValue.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		4FFD22D720401426003760D0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4FFD22D820401673003760D0 /* IIUserNologinHeaderView.swift */,
+				4FFD22DA20401683003760D0 /* IIUserNologinHeaderView.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		DFFC5779B55D697D3EED6CAD /* Frameworks */ = {
@@ -390,6 +404,7 @@
 				4FFD22CE2040090C003760D0 /* IIAddViewController.xib in Resources */,
 				4F445085203FAB9600940462 /* LaunchScreen.storyboard in Resources */,
 				4F445082203FAB9600940462 /* Assets.xcassets in Resources */,
+				4FFD22DB20401683003760D0 /* IIUserNologinHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +589,7 @@
 				4F4450B8203FB0F900940462 /* IIOrderViewController.swift in Sources */,
 				4F4450BC203FB10A00940462 /* IIAddViewController.swift in Sources */,
 				4F4450BA203FB10200940462 /* IIMineViewController.swift in Sources */,
+				4FFD22D920401673003760D0 /* IIUserNologinHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

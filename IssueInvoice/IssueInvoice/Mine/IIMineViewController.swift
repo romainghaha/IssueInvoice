@@ -8,12 +8,27 @@
 
 import UIKit
 
-class IIMineViewController: UIViewController {
+class IIMineViewController: UITableViewController {
 
+    /// 懒加载 头部
+    private lazy var headerView = Bundle.main.loadNibNamed("IIUserNologinHeaderView", owner: nil, options: nil)?.last as! UIView
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named:"navigation_background_white"), for: .default)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = headerView
     }
 
     override func didReceiveMemoryWarning() {
