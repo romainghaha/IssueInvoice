@@ -22,6 +22,9 @@
 		4F4450BE203FB40F00940462 /* IIRootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4450BD203FB40F00940462 /* IIRootTabBar.swift */; };
 		4F4450C1203FB70500940462 /* IIVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4450C0203FB70500940462 /* IIVerticalButton.swift */; };
 		4F4450C4203FB7F900940462 /* IIFixedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4450C3203FB7F900940462 /* IIFixedValue.swift */; };
+		4FFD22CA204006D0003760D0 /* IIAddNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD22C9204006D0003760D0 /* IIAddNavViewController.swift */; };
+		4FFD22CC204007BE003760D0 /* IIAddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD22CB204007BE003760D0 /* IIAddTextViewController.swift */; };
+		4FFD22CE2040090C003760D0 /* IIAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFD22CD2040090C003760D0 /* IIAddViewController.xib */; };
 		5466975D5B9E400422A0D264 /* Pods_IssueInvoiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ECC433D7AE904F889BF0A3 /* Pods_IssueInvoiceTests.framework */; };
 		AB4F7D896D7A57057AEE9541 /* Pods_IssueInvoiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CD5C85DBA4038956A980F4 /* Pods_IssueInvoiceUITests.framework */; };
 		D9FF690C54F8E74D7FD63C47 /* Pods_IssueInvoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372FB9E8351FE7F6959FB304 /* Pods_IssueInvoice.framework */; };
@@ -69,6 +72,9 @@
 		4F4450BD203FB40F00940462 /* IIRootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIRootTabBar.swift; sourceTree = "<group>"; };
 		4F4450C0203FB70500940462 /* IIVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIVerticalButton.swift; sourceTree = "<group>"; };
 		4F4450C3203FB7F900940462 /* IIFixedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIFixedValue.swift; sourceTree = "<group>"; };
+		4FFD22C9204006D0003760D0 /* IIAddNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIAddNavViewController.swift; sourceTree = "<group>"; };
+		4FFD22CB204007BE003760D0 /* IIAddTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIAddTextViewController.swift; sourceTree = "<group>"; };
+		4FFD22CD2040090C003760D0 /* IIAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IIAddViewController.xib; sourceTree = "<group>"; };
 		52CD5C85DBA4038956A980F4 /* Pods_IssueInvoiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssueInvoiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54623085EE7766B3901ED702 /* Pods-IssueInvoiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueInvoiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssueInvoiceTests/Pods-IssueInvoiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AE2B25F9E60F6E8C95EC1CB /* Pods-IssueInvoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueInvoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssueInvoice/Pods-IssueInvoice.release.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +237,9 @@
 			children = (
 				4F4450BF203FB6E900940462 /* UI */,
 				4F4450BB203FB10A00940462 /* IIAddViewController.swift */,
+				4FFD22CD2040090C003760D0 /* IIAddViewController.xib */,
+				4FFD22C9204006D0003760D0 /* IIAddNavViewController.swift */,
+				4FFD22CB204007BE003760D0 /* IIAddTextViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFD22CE2040090C003760D0 /* IIAddViewController.xib in Resources */,
 				4F445085203FAB9600940462 /* LaunchScreen.storyboard in Resources */,
 				4F445082203FAB9600940462 /* Assets.xcassets in Resources */,
 			);
@@ -553,10 +563,12 @@
 			files = (
 				4F4450AB203FAE2600940462 /* IIRootTabBarViewController.swift in Sources */,
 				4F4450C1203FB70500940462 /* IIVerticalButton.swift in Sources */,
+				4FFD22CA204006D0003760D0 /* IIAddNavViewController.swift in Sources */,
 				4F44507B203FAB9600940462 /* AppDelegate.swift in Sources */,
 				4F4450AD203FAE4400940462 /* IIBaseNavViewController.swift in Sources */,
 				4F4450B6203FB0EB00940462 /* IIAttentionViewController.swift in Sources */,
 				4F4450C4203FB7F900940462 /* IIFixedValue.swift in Sources */,
+				4FFD22CC204007BE003760D0 /* IIAddTextViewController.swift in Sources */,
 				4F4450B4203FB0DB00940462 /* IIHomeViewController.swift in Sources */,
 				4F4450BE203FB40F00940462 /* IIRootTabBar.swift in Sources */,
 				4F4450B8203FB0F900940462 /* IIOrderViewController.swift in Sources */,

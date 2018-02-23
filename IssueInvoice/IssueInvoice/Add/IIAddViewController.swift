@@ -79,7 +79,7 @@ class IIAddViewController: UIViewController {
         
     }
     
-    @IBAction func dissMissButton(_ sender: UIButton) {
+    @IBAction func dismissButton(_ sender: UIButton) {
         
         for i in 1...buttons.count {
             let button = buttons[i - 1]
@@ -129,7 +129,7 @@ class IIAddViewController: UIViewController {
                         self.dismiss(animated: false, completion: {
                             // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
                             let root = UIApplication.shared.keyWindow?.rootViewController
-                            let vc = ZYDPublishNavigationController(rootViewController: ZYDPublishTextViewController())
+                            let vc = IIAddNavViewController(rootViewController: IIAddTextViewController())
                             root?.present(vc, animated: true, completion: nil)
                             
                         })
