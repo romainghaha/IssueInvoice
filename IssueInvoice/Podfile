@@ -7,14 +7,6 @@ target 'IssueInvoice' do
 
   # Pods for IssueInvoice
 
-  target 'IssueInvoiceTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'IssueInvoiceUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'SnapKit'
 
 end

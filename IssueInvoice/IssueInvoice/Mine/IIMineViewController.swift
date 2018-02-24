@@ -8,14 +8,20 @@
 
 import UIKit
 
-class IIMineViewController: UITableViewController {
+class IIMineViewController: UITableViewController,IIUserNologinHeaderViewDelegate {
+    
+    func jumpToMoreLoginController() {
+        //加载UIStoryBoard
+        navigationController?.pushViewController(UIStoryboard(name: "IIMoreLoginController", bundle: nil).instantiateViewController(withIdentifier: "IIMoreLoginController") as! IIMoreLoginController, animated: true)
+
+    }
 
     /// 懒加载 头部
-    private lazy var headerView = Bundle.main.loadNibNamed("IIUserNologinHeaderView", owner: nil, options: nil)?.last as! UIView
-    
+    private lazy var headerView = Bundle.main.loadNibNamed("IIUserNologinHeaderView", owner: nil, options: nil)?.last as! IIUserNologinHeaderView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.view.backgroundColor = UIColor.darkGray
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,22 +35,69 @@ class IIMineViewController: UITableViewController {
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView()
         tableView.tableHeaderView = headerView
+        headerView.delegate = self
+        tableView.separatorStyle = .none
+        
     }
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+extension IIMineViewController {
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 1 ? 0 : 10
     }
-    */
-
+    
+    // 每组头部视图
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 10))
+        return view
+    }
+    
+    // 行高
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.section == 0 && indexPath.row == 0 {
+//            return (concerns.count == 0 || concerns.count == 1) ? 40 : 114
+//        }
+        return 40
+    }
+    
+    // 组数
+    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return sections.count
+        return 3
+    }
+    
+    // 每组的行数
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return sections[section].count
+        return 2
+    }
+    
+    // cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+//        if indexPath.section == 3 && indexPath.row == 1 { // 跳转到系统设置界面
+//            let settingVC = SettingViewController()
+//            settingVC.navigationItem.title = "设置"
+//            navigationController?.pushViewController(settingVC, animated: true)
+//        }
+        print("点击了cell")
+    }
 }

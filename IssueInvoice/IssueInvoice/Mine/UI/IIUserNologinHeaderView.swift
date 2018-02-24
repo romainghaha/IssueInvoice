@@ -8,6 +8,29 @@
 
 import UIKit
 
-class IIUserNologinHeaderView: UIView {
+protocol IIUserNologinHeaderViewDelegate: NSObjectProtocol {
+    func jumpToMoreLoginController()
+}
 
+class IIUserNologinHeaderView: UIView {
+    
+    public weak var delegate: IIUserNologinHeaderViewDelegate?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    
+    @IBAction func moreLoginButtonClickAction(_ sender: Any) {
+        delegate?.jumpToMoreLoginController()
+    }
 }

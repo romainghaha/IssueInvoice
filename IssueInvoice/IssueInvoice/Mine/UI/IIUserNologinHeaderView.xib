@@ -14,13 +14,16 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IIUserNologinHeaderView" customModule="IssueInvoice" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0h9-BC-0zX">
                     <rect key="frame" x="0.0" y="51" width="375" height="66"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-hT-dtQ">
                             <rect key="frame" x="0.0" y="0.0" width="94" height="66"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="l8l-gc-gIh"/>
+                            </constraints>
                             <state key="normal" image="cellphoneicon_login_profile_66x66_"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIV-5b-coP">
@@ -37,20 +40,21 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="zIV-5b-coP" firstAttribute="width" secondItem="5lT-hT-dtQ" secondAttribute="width" id="49b-9D-sdH"/>
-                        <constraint firstAttribute="height" constant="66" id="CMX-ud-rlf"/>
-                        <constraint firstItem="cqL-OE-HpE" firstAttribute="height" secondItem="5lT-hT-dtQ" secondAttribute="height" id="XkW-6l-yTw"/>
-                        <constraint firstItem="fCD-7s-bV4" firstAttribute="width" secondItem="5lT-hT-dtQ" secondAttribute="width" id="cdY-WI-sZP"/>
-                        <constraint firstItem="cqL-OE-HpE" firstAttribute="width" secondItem="5lT-hT-dtQ" secondAttribute="width" id="iBI-Iz-xJo"/>
-                        <constraint firstItem="zIV-5b-coP" firstAttribute="height" secondItem="5lT-hT-dtQ" secondAttribute="height" id="mSG-uW-dKb"/>
-                        <constraint firstItem="fCD-7s-bV4" firstAttribute="height" secondItem="5lT-hT-dtQ" secondAttribute="height" id="wKG-MH-9ua"/>
+                        <constraint firstItem="cqL-OE-HpE" firstAttribute="width" secondItem="5lT-hT-dtQ" secondAttribute="width" id="8B3-Jg-4Rz"/>
+                        <constraint firstAttribute="height" constant="66" id="Gzz-KS-JXo"/>
+                        <constraint firstItem="zIV-5b-coP" firstAttribute="width" secondItem="5lT-hT-dtQ" secondAttribute="width" id="TJa-FE-ncL"/>
+                        <constraint firstItem="fCD-7s-bV4" firstAttribute="width" secondItem="5lT-hT-dtQ" secondAttribute="width" id="VQh-WQ-sDa"/>
+                        <constraint firstItem="fCD-7s-bV4" firstAttribute="height" secondItem="zIV-5b-coP" secondAttribute="height" id="hJD-9n-JvG"/>
+                        <constraint firstItem="cqL-OE-HpE" firstAttribute="height" secondItem="zIV-5b-coP" secondAttribute="height" id="qik-3C-hlA"/>
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-zm-c4g">
                     <rect key="frame" x="125" y="142" width="125" height="28"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="28" id="BCv-aO-nYC"/>
                         <constraint firstAttribute="height" constant="28" id="LdS-id-U4C"/>
+                        <constraint firstAttribute="width" constant="125" id="YbF-1x-ze5"/>
                         <constraint firstAttribute="width" constant="125" id="aEv-wG-ruf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,6 +66,9 @@
                             <integer key="value" value="14"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="moreLoginButtonClickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8yN-nT-03X"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9L-Z0-Wph">
                     <rect key="frame" x="0.0" y="190" width="375" height="70"/>
@@ -69,6 +76,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ra-nJ-rSP">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="70"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Kw3-y2-cD6"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <inset key="titleEdgeInsets" minX="-25" minY="25" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="30" minY="-25" maxX="0.0" maxY="0.0"/>
@@ -100,24 +110,24 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="WOu-9q-2T3"/>
-                        <constraint firstItem="z4L-Ta-rmO" firstAttribute="width" secondItem="3ra-nJ-rSP" secondAttribute="width" id="YoB-bW-NFV"/>
-                        <constraint firstItem="rfL-cq-svE" firstAttribute="width" secondItem="3ra-nJ-rSP" secondAttribute="width" id="hZk-7f-hmv"/>
+                        <constraint firstItem="rfL-cq-svE" firstAttribute="height" secondItem="3ra-nJ-rSP" secondAttribute="height" id="AvI-s1-aAw"/>
+                        <constraint firstItem="rfL-cq-svE" firstAttribute="width" secondItem="3ra-nJ-rSP" secondAttribute="width" id="Zrv-Zb-SP0"/>
+                        <constraint firstItem="z4L-Ta-rmO" firstAttribute="width" secondItem="3ra-nJ-rSP" secondAttribute="width" id="cOP-Wy-hw3"/>
+                        <constraint firstItem="z4L-Ta-rmO" firstAttribute="height" secondItem="3ra-nJ-rSP" secondAttribute="height" id="fQl-ho-V8m"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="0h9-BC-0zX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="51" id="3ll-1I-SIC"/>
-                <constraint firstItem="0h9-BC-0zX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5LU-Xy-9Lt"/>
-                <constraint firstItem="hbe-zm-c4g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FNG-GE-D2Y"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q9L-Z0-Wph" secondAttribute="trailing" id="Haf-kB-dRs"/>
-                <constraint firstItem="hbe-zm-c4g" firstAttribute="top" secondItem="0h9-BC-0zX" secondAttribute="bottom" constant="25" id="JLp-Bt-NeX"/>
-                <constraint firstItem="q9L-Z0-Wph" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VCX-Cw-NIO"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="q9L-Z0-Wph" secondAttribute="bottom" id="ZTm-xN-htW"/>
-                <constraint firstItem="0h9-BC-0zX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uvi-0T-l6l"/>
-                <constraint firstItem="q9L-Z0-Wph" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hbe-zm-c4g" secondAttribute="bottom" constant="20" id="vWQ-0Y-2Bp"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0h9-BC-0zX" secondAttribute="trailing" id="wCi-8Z-Pll"/>
+                <constraint firstItem="0h9-BC-0zX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="51" id="BHE-2J-Fle"/>
+                <constraint firstItem="hbe-zm-c4g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FfN-Py-8tR"/>
+                <constraint firstAttribute="trailing" secondItem="0h9-BC-0zX" secondAttribute="trailing" id="K7t-KT-PNK"/>
+                <constraint firstItem="hbe-zm-c4g" firstAttribute="top" secondItem="0h9-BC-0zX" secondAttribute="bottom" constant="25" id="W4T-yQ-bAT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q9L-Z0-Wph" secondAttribute="trailing" id="XPx-Fv-AGn"/>
+                <constraint firstItem="q9L-Z0-Wph" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="d38-Rv-2bC"/>
+                <constraint firstItem="q9L-Z0-Wph" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gH0-zS-h98"/>
+                <constraint firstItem="0h9-BC-0zX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h4N-XM-r5C"/>
+                <constraint firstItem="q9L-Z0-Wph" firstAttribute="top" secondItem="hbe-zm-c4g" secondAttribute="bottom" constant="20" id="udI-0e-ndj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
