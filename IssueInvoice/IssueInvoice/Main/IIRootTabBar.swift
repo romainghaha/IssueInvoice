@@ -16,6 +16,7 @@ class IIRootTabBar: UITabBar {
         super.init(frame: frame)
         //        backgroundColor = UIColor.red
         //        barTintColor = UIColor.red
+        tintColor = UIColor.red
         publishButton.addTarget(self, action: #selector(clickPublishButton), for: .touchUpInside)
         addSubview(publishButton)
     }
